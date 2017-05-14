@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NavGATOR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="kXh-im-mSc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myS-Ri-e68">
+                                <rect key="frame" x="0.0" y="332" width="375" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="335" id="pRP-q1-Pnl"/>
+                                </constraints>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GA7-PD-Nzl">
+                                <rect key="frame" x="16" y="244" width="343" height="80"/>
+                                <state key="normal" image="navgate_btn"/>
+                                <connections>
+                                    <action selector="navgate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BhP-eY-6RC"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Latitude" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YrF-ic-Xc1">
+                                <rect key="frame" x="16" y="50" width="343" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="GLi-ew-Gtr"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Longitude" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lj3-pQ-8Bg">
+                                <rect key="frame" x="16" y="118" width="343" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="yqW-c6-4XN"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lj3-pQ-8Bg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0qC-Df-rSI"/>
+                            <constraint firstItem="YrF-ic-Xc1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="6q1-UL-JPx"/>
+                            <constraint firstItem="myS-Ri-e68" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AGK-Hk-yQO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kXh-im-mSc" secondAttribute="bottom" id="BLs-u3-rqB"/>
+                            <constraint firstItem="GA7-PD-Nzl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BN1-oF-miH"/>
+                            <constraint firstItem="myS-Ri-e68" firstAttribute="top" secondItem="GA7-PD-Nzl" secondAttribute="bottom" constant="8" id="CdX-ly-SHF"/>
+                            <constraint firstItem="Lj3-pQ-8Bg" firstAttribute="top" secondItem="YrF-ic-Xc1" secondAttribute="bottom" constant="8" id="Crr-rO-pwN"/>
+                            <constraint firstItem="YrF-ic-Xc1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Lrn-EP-dGZ"/>
+                            <constraint firstItem="GA7-PD-Nzl" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Z0j-Fs-zot"/>
+                            <constraint firstItem="kXh-im-mSc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eg1-0z-cz1"/>
+                            <constraint firstItem="Lj3-pQ-8Bg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iEF-1P-sxK"/>
+                            <constraint firstItem="YrF-ic-Xc1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="jMX-fA-yCe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="myS-Ri-e68" secondAttribute="bottom" id="l5P-Oc-2z9"/>
+                            <constraint firstItem="kXh-im-mSc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mfc-sE-m0O"/>
+                            <constraint firstAttribute="trailing" secondItem="myS-Ri-e68" secondAttribute="trailing" id="osO-0m-FCo"/>
+                            <constraint firstAttribute="trailing" secondItem="kXh-im-mSc" secondAttribute="trailing" id="zBe-EP-3uF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="latitudeTxtField" destination="YrF-ic-Xc1" id="EMc-0L-Ond"/>
+                        <outlet property="longitudeTxtField" destination="Lj3-pQ-8Bg" id="81x-xJ-cbd"/>
+                        <outlet property="mapView" destination="myS-Ri-e68" id="biY-Tm-qXT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="562" height="1000"/>
+        <image name="navgate_btn" width="343" height="80"/>
+    </resources>
+</document>
